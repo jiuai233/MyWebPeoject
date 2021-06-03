@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="total.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="back_title">
+        <a href="#home">
+            <img src="/photo/logo.png">
+        </a>
+    </div>
+    <div id="home" class="head">
+        <div class="head_left">
+            <img src="/photo/logo.png">
+            <p>Cat Encyclopedia</p>
+        </div>
+
+        <div class="head_right">
+            <ul>
+                <li><a href="home.html">我的首页</a></li>
+                <li><a href="More.html">了解我们></a></li>
+                <li><a href="Photo.html">我的美图></a></li>
+                <li><a href="role.html">我的更多></a></li>
+                <li><a href="receive.html">领取方式</a></li>
+                <li><a href="Leaving_message.html">留言建议</a></li>
+            </ul>
+        </div>
+        <div class="head_right_avatar">
+            <a href="login.html"><img class="avatar" src="/photo/头像.png">
+            </a>
+
+            <ul class="nav">
+                <li><a href="news.html">消息</a> </li>
+                <li><a href="dynamic.html">动态</a> </li>
+                <li><a href="Favorites.html">收藏</a> </li>
+                <li><a href="Animation.html">历史</a> </li>
+                <li><a href="Animation.html">好友</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="role-nav role-total  clearfix">
+        <div class="role-nav-left">
+            <ul>
+                <li>
+                    <a href="Animation.html"><img src="/photo/setting.png">设置</a>
+                </li>
+                <li>
+                    <a href="Animation.html"><img src="/photo/收藏.png">收藏</a>
+                </li>
+                <li>
+                    <a href="Animation.html"><img src="/photo/订阅.png">订阅</a>
+                </li>
+                <li>
+                    <a href="Animation.html"><img src="/photo/动态.png">动态</a>
+                </li>
+                <li>
+                    <a href="Animation.html"><img src="/photo/喜欢.png">喜欢</a>
+                </li>
+            </ul>
+        </div>
+        <div class="role-search">
+            <input type="text">
+            <a href="Animation.html"><img src="/photo/search.png"></a>
+        </div>
+    </div>
+    <div class="favourite-middle">
+        <div class="left">
+            <h4>我的创建</h4>
+            <ul class="favourite-collect">
+                <li><img src="/photo/增加 添加 加减.png" alt=""> 增加新的收藏夹
+
+                </li>
+                <li><img src="/photo/收藏.png" alt="">默认收藏夹
+                    <p>0</p>
+                </li>
+                <li><img src="/photo/收藏.png" alt="">默认收藏夹
+                    <p>0</p>
+                </li>
+                <li><img src="/photo/收藏.png" alt="">默认收藏夹
+                    <p>0</p>
+                </li>
+                <li><img src="/photo/收藏.png" alt="">默认收藏夹
+                    <p>0</p>
+                </li>
+                <li><img src="/photo/收藏.png" alt="">默认收藏夹
+                    <p>0</p>
+                </li>
+            </ul>
+        </div>
+        <div class="favourite-right">
+            <div class="favourite-right-head">
+                <div class="photo3">
+                    <img src="/photo/布偶1.jpg" alt="">
+                </div>
+
+                <h4>默认收藏夹</h4>
+
+
+            </div>
+            <div class="favourite-right-body">
+                <img src="/photo/cry.jpg" alt=""> 添加点内容吧!
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="footer2">
+            <p>Creat by Zhang rui heng @ Cat Encyclopedia</p>
+        </div>
+</body>
+<script>
+    var flag = 5;
+    var i = 0;
+    var ul = document.querySelector('.favourite-collect')
+    var plus = ul.children[0]
+    var message = document.querySelector('.favourite-right-body')
+    console.log(message);
+
+    plus.addEventListener('click', function() {
+        if (i < 5) {
+            ul.children[i + 1].style['display'] = 'block';
+            i++;
+        } else {
+            alert('已达到添加上限')
+        }
+    })
+    for (let i = 0; i < 5; i++) {
+        ul.children[i + 1].addEventListener('click', function() {
+            for (let t = 0; t < 5; t++) {
+                ul.children[t + 1].style['background-color'] = '';
+                ul.children[t + 1].style['opacity'] = '';
+            }
+            this.style['background-color'] = 'aqua';
+            this.style['opacity'] = '.1';
+            message.style['display'] = 'block'
+        })
+
+    }
+</script>
+
+</html>

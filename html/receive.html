@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="total.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="QR Code.jpg" alt="">
+    <div class="back_title">
+        <a href="#home">
+            <img src="/photo/logo.png">
+        </a>
+    </div>
+
+    <div class="back_title">
+        <a href="#home">
+            <img src="/photo/logo.png">
+        </a>
+    </div>
+    <div id="home" class="head">
+        <div class="head_left">
+            <img src="/photo/logo.png">
+            <p>Cat Encyclopedia</p>
+        </div>
+
+        <div class="head_right">
+            <ul>
+                <li><a href="home.html">我的首页</a></li>
+                <li><a href="More.html">了解我们></a></li>
+                <li><a href="Photo.html">我的美图></a></li>
+                <li><a href="role.html">我的更多></a></li>
+                <li><a href="receive.html">领取方式</a></li>
+                <li><a href="Leaving_message.html">留言建议</a></li>
+            </ul>
+        </div>
+        <div class="head_right_avatar">
+            <a href="login.html"><img class="avatar" src="/photo/头像.png">
+            </a>
+
+            <ul class="nav">
+                <li><a href="news.html">消息</a> </li>
+                <li><a href="dynamic.html">动态</a> </li>
+                <li><a href="Favorites.html">收藏</a> </li>
+                <li><a href="Animation.html">历史</a> </li>
+                <li><a href="Animation.html">好友</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="receive-box">
+        <img class="title_photo" src="/photo/cat6jpg.jpg">
+
+
+        <div class="receive-body">
+            <h4>如何领养一直猫咪？</h4>
+            <p>好多人都问过我关于如何领养一只猫的问题 所以今天就和大家一起来聊聊领养的事情 关于中分的身世，被抛弃还是其他原因？ 以及领养猫咪之前之后要如何处理 这是一期干货满满的视频 希望大家会喜欢！
+                <a href="https://zhuanlan.zhihu.com/p/50092594">详情可点击</a>
+                <img src="/photo2/13.jpg" alt="">
+            </p>
+
+            <p>冬天到了 希望有车车的朋友 开车之前拍拍车子 检查一下车底或者车轮缝里 是否有猫咪在避寒取暖 它们并没有恶意 只是想在寒冷的冬天 汲取一点点温暖而已
+            </p>
+            <hr>
+            <p>如果遇到流浪猫 请不要恶意虐待 如果可以 给它们一点点水 或者不要的纸箱 以及不要的衣服 你的小小的善意 是它们大大的幸福
+
+            </p>
+            <p>谢谢你看完这篇文章 如果可以 请点个转发分享 让更多人知道领养的方法 领养代替购买 希望毛孩子们都有个家
+
+            </p>
+            <img class="bottom_photo" src="知乎.jpg" alt="">
+        </div>
+        <div class="clear">
+
+        </div>
+
+
+
+    </div>
+
+    <div class="clear"></div>
+    <div class="footer2">
+        <p>Creat by Zhang rui heng @ Cat Encyclopedia</p>
+    </div>
+
+    <script>
+        var y = window.pageYOffset
+
+        var img = document.querySelector('img')
+
+        var imgtop = img.offsetTop
+
+        document.addEventListener('scroll', function() {
+            if (window.pageYOffset > 100) {
+                img.style['position'] = 'fixed'
+                img.style['top'] = imgtop + 'px'
+            } else {
+                img.style['position'] = 'absolute'
+                img.style['top'] = imgtop + 'px'
+            }
+        })
+    </script>
+</body>

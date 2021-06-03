@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="total.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="back_title">
+        <a href="#home">
+            <img src="/photo/logo.png">
+        </a>
+    </div>
+    <div id="home" class="head">
+        <div class="head_left">
+            <img src="/photo/logo.png">
+            <p>Cat Encyclopedia</p>
+        </div>
+
+        <div class="head_right">
+            <ul>
+                <li><a href="#">我的首页</a></li>
+                <li><a href="#">了解我们></a></li>
+                <li><a href="#">我的美图></a></li>
+                <li><a href="#">我的更多></a></li>
+                <li><a href="#">领取方式</a></li>
+                <li><a href="#">留言建议</a></li>
+            </ul>
+        </div>
+        <div class="head_right_avatar">
+            <a href="login.html"><img class="avatar" src="/photo/默认头像.png">
+            </a>
+
+            <ul class="nav">
+                <li><a href="#">消息</a> </li>
+                <li><a href="#">动态</a> </li>
+                <li><a href="#">收藏</a> </li>
+                <li><a href="#">历史</a> </li>
+                <li><a href="#">好友</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="home_middle total_width">
+        <ul class="Animation">
+            <li><img src="/photo/4.png"></li>
+            <li><img src="/photo/4.png"></li>
+            <li><img src="/photo/4.png"></li>
+            <li><img src="/photo/4.png"></li>
+            <li><img src="/photo/4.png"></li>
+            <li><img src="/photo/4.png"></li>
+        </ul>
+    </div>
+
+
+    </div>
+    <div class="clear"></div>
+    <div class="home_box">
+        <div class="home_box_top">
+            <ul>
+                <li><img src="/photo/英短.jpg" alt="">
+                    <a href="#">英短</a></li>
+                <li><img src="/photo/布偶3.jpg" alt="">
+                    <a href="#">布偶</a></li>
+                <li><img src="/photo/加菲jpg.jpg" alt="">
+                    <a href="#">加菲</a></li>
+            </ul>
+        </div>
+        <div class="home_box_bottom">
+            <ul>
+                <li><img src="/photo/波斯猫.jpg" alt="">
+                    <a href="#">波斯</a></li>
+                <li><img src="/photo/暹罗.jpg" alt="">
+                    <a href="#">暹罗</a></li>
+                <li><img src="/photo/美短.jpg" alt="">
+                    <a href="#">美短</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer2">
+        <p>Creat by Zhang rui heng @ Cat Encyclopedia</p>
+    </div>
+    <script>
+        var go = document.querySelector('.head_right')
+        var go_2 = document.querySelector('.nav')
+        var go_3 = document.querySelector('.home_box_top')
+        var go_4 = document.querySelector('.home_box_bottom')
+        console.log(go_2);
+        for (let i = 0; i < go.children.length; i++) {
+            go.addEventListener('click', function() {
+                window.location.href = 'login.html'
+            })
+        }
+        for (let i = 0; i < go_2.children.length; i++) {
+            go_2.addEventListener('click', function() {
+                window.location.href = 'login.html'
+            })
+        }
+        for (let i = 0; i < go_3.children.length; i++) {
+            go_3.addEventListener('click', function() {
+                window.location.href = 'login.html'
+            })
+        }
+        for (let i = 0; i < go_4.children.length; i++) {
+            go_4.addEventListener('click', function() {
+                window.location.href = 'login.html'
+            })
+        }
+    </script>
+</body>

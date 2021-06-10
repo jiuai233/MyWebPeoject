@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Readme.css">
+    <script src=""></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        这个html的有些界面是一开始刚学的时候搭建的所以看上去相对简陋，后面学了Js以后搭配Css做了一些很好玩的动画，这个界面 介绍了一些对于平时常见猫的介绍和一些养猫的小技巧，包括一些B站的可爱的猫猫的视频 和关于猫的领养方法。 因为此页面是关于猫的图鉴，所以Logo做的与猫相关。可爱的猫猫拿着放大镜看着图鉴， 我将这个界面放到了我的个人Github上如果你觉得做的不错可以去我的首页给我点一个Star。
+    </div>
+    <div class="github">https://github.com/jiuai233/MyWebPeoject</div>
+    <div class="expore">Expore</div>
+</body>
+<script>
+    const text = document.querySelector('.box');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>")
+    const githubweb = document.querySelector('.github')
+    const expore = document.querySelector('.expore')
+
+    expore.addEventListener('click', function() {
+        window.location.href = "Start.html"
+    })
+
+
+
+    const letters = document.querySelectorAll("span");
+    for (let i = 0; i < letters.length; i++) {
+        letters[i].addEventListener('mouseover', function() {
+            letters[i].classList.add('active')
+            letters[i].classList.add('active' + i)
+
+            setTimeout(() => {
+                let letter = document.querySelector('.active' + i)
+                letter.classList.remove("active");
+                letter.classList.add("show");
+                githubweb.classList.add("githubshow")
+            }, 2000)
+        })
+    }
+</script>
+
+</html>

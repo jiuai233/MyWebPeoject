@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: white;
+    translate: all 2s;
+}
+
+.active {
+    animation: smoke 2s linear forwards;
+    transform-origin: bottom;
+}
+
+.show {
+    animation: show-letter .5s linear forwards;
+}
+
+span {
+    display: inline-block;
+}
+
+.Go {
+    background-color: white;
+    color: black;
+}
+
+.github {
+    width: 400px;
+    height: 50px;
+    color: white;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.githubshow {
+    opacity: 1;
+}
+
+.expore {
+    padding: 15px 50px;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 50px auto;
+}
+
+.expore:hover {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, .9);
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+
+@keyframes show-letter {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
